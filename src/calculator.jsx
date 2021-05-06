@@ -26,7 +26,7 @@ class Calculator extends React.Component {
     const denominator = ((1 + monthlyRate) ** months) - 1;
     const monthly = principle * (numerator / denominator);
     const interest = this.amortizedInterest(principle, months, monthlyRate, monthly);
-    const total = principle + interest;
+    const total = Number(principle) + Number(interest);
 
     this.setState({
       total: total,
