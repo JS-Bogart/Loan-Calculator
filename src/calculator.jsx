@@ -93,11 +93,11 @@ class Calculator extends React.Component {
   render() {
     return (
       <div className="page">
-        <h1>Loan Calculator</h1>
         <div className="calculator">
           <div className="input-fields">
             <div className="amount-input">
               <h2>Loan Amount</h2>
+              <p>$</p>
               <input 
                 type="text"
                 value={this.state.principle}
@@ -107,6 +107,7 @@ class Calculator extends React.Component {
             </div>
             <div className="rate-input">
               <h2>Interest Rate Per Year</h2>
+              <p>%</p>
               <input 
                 type="text" 
                 value={this.state.interestRate}
@@ -142,16 +143,16 @@ class Calculator extends React.Component {
           <div className="output-fields">
             <div className="monthly-output">
               <h2>Monthly Payments</h2>
-              <p>{this.state.monthly.toFixed(2)}</p>
+              <p>$ {this.state.monthly.toFixed(2)}</p>
             </div>
             <div className="output-totals">
               <div className="interest-output">
                 <h3>Total Interest Paid</h3>
-                <p>{this.state.interest.toFixed(2)}</p>
+                <p>$ {this.state.interest.toFixed(2)}</p>
               </div>
               <div className="total-output">
                 <h3>Total Paid</h3>
-                <p>{Number(this.state.total).toFixed(2)}</p>
+                <p>$ {Number(this.state.total).toFixed(2)}</p>
               </div>
             </div>
           </div>

@@ -1,12 +1,34 @@
+/* html {
+  height: 100%;
+} */
+
 body {
   background-color: rgb(238,247,239);
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(74,74,74);
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid green;
+}
+
+footer {
+  background-color: rgb(74,74,74);
+  height: 200px;
+  width: 100%;
+  border: 2px solid blue;
 }
 
 h1 {
   font-size: 60px;
-  margin-bottom: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: rgb(227,114,99);
+  width: 100%;
+  text-align: center;
 }
 
 h2 {
@@ -25,6 +47,7 @@ button {
   background-color: rgb(227,114,99);
   border: none;
   border-radius: 40px;
+  margin-top: 10px;
 }
 
 button:hover {
@@ -33,14 +56,20 @@ button:hover {
   transform: scale(1.1);
 }
 
-footer {
-  background-color: rgb(74,74,74);
-  height: 50px;
+input {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+  color: rgb(74,74,74);
+  background-color: rgb(255,255,255);
+  border: 1px solid rgb(74,74,74);
+  font-size: 20px;
 }
 
-#root {
-  margin-top: 10%;
-}
+/* #root {
+  height: 100%;
+} */
 
 .page {
   display: flex;
@@ -54,6 +83,8 @@ footer {
   padding: 10px;
   border: 5px solid rgb(60,176,155);
   border-radius: 15px;
+  margin-top: 150px;
+  margin-bottom: 150px;
 }
 
 .calculator > div {
@@ -63,6 +94,26 @@ footer {
 .input-fields > div {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.amount-input {
+  position: relative;
+}
+
+.amount-input p {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.rate-input {
+  position: relative;
+}
+
+.rate-input p {
+  position: absolute;
+  bottom: 10px;
+  right: 45px;
 }
 
 .loan-term > div {
@@ -85,6 +136,13 @@ footer {
   align-items: center;
   font-size: 80px;
   margin-bottom: 15px;
+}
+
+.monthly-output p {
+  background-color: rgb(60,176,155);
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
 }
 
 .interest-output {
