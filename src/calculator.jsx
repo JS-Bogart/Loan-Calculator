@@ -1,6 +1,8 @@
 import React from 'react';
 import './reset.css';
 import './calculator.css';
+import gitlogo from './images/github-logo.png';
+import lilogo from './images/linkedin-logo.png';
 
 class Calculator extends React.Component {
   constructor() {
@@ -93,6 +95,7 @@ class Calculator extends React.Component {
   render() {
     return (
       <div className="page">
+        <h1>Loan Calculator</h1>
         <div className="calculator">
           <div className="input-fields">
             <div className="amount-input">
@@ -157,6 +160,23 @@ class Calculator extends React.Component {
             </div>
           </div>
         </div>
+        <footer>
+          <p>Created by Jeffrey Bogart</p>
+          <div className="links">
+            <a 
+              href="https://github.com/JS-Bogart/Loan-Calculator" 
+              className="github-link"
+            >
+              <img src={gitlogo} alt="github-logo" className="gitlogo"/>
+            </a>
+            <a 
+              href="https://www.linkedin.com/in/jeffrey-bogart-7874121a5/" 
+              className="linkedin-link"
+            >
+              <img src={lilogo} alt="linkedin-logo" className="lilogo"/>
+            </a>
+          </div>
+        </footer>
       </div>
     )
   }
