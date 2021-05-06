@@ -1,6 +1,6 @@
 import React from 'react';
-import './reset.css';
-import './calculator.css';
+// import './reset.css';
+// import './calculator.css';
 
 class Calculator extends React.Component {
   constructor() {
