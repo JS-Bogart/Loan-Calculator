@@ -1,6 +1,7 @@
 import React from 'react';
 import './reset.css';
 import './calculator.css';
+import './animations.css';
 import gitlogo from './images/github-logo.png';
 import lilogo from './images/linkedin-logo.png';
 
@@ -29,6 +30,11 @@ class Calculator extends React.Component {
     const monthly = principle * (numerator / denominator);
     const interest = this.amortizedInterest(principle, months, monthlyRate, monthly);
     const total = Number(principle) + Number(interest);
+
+    const monthlyPayment = document.getElementById("monthly-payment");
+    monthlyPayment.classList.remove("animate");
+    void monthlyPayment.offsetWidth;
+    monthlyPayment.classList.add("animate");
 
     this.setState({
       total: total,
@@ -146,7 +152,12 @@ class Calculator extends React.Component {
           <div className="output-fields">
             <div className="monthly-output">
               <h2>Monthly Payments</h2>
-              <p>$ {this.state.monthly.toFixed(2)}</p>
+              <div className="monthly-output-amount">
+                <p 
+                  id="monthly-payment"
+                  className="animate"
+                >$ {this.state.monthly.toFixed(2)}</p>
+              </div>
             </div>
             <div className="output-totals">
               <div className="interest-output">

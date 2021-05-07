@@ -129,6 +129,8 @@ img {
 .output-fields {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 400px;
 }
 
 .monthly-output {
@@ -139,11 +141,15 @@ img {
   margin-bottom: 15px;
 }
 
-.monthly-output p {
+.monthly-output-amount {
+  display: flex;
+  align-items: center;
   background-color: rgb(60,176,155);
   padding: 10px;
   margin-top: 10px;
   border-radius: 10px;
+  height: 100px;
+  width: auto;
 }
 
 .interest-output {
