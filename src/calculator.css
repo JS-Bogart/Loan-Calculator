@@ -130,7 +130,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 400px;
+  min-width: 400px;
 }
 
 .monthly-output {
