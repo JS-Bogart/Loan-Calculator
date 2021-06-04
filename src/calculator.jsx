@@ -15,7 +15,8 @@ class Calculator extends React.Component {
       interestRate: 4.5,
       monthly: 93.22,
       interest: 592.91,
-      total: 5592.91
+      total: 5592.91,
+      tableData = []
     }
     this.calculate = this.calculate.bind(this);
   }
@@ -52,6 +53,10 @@ class Calculator extends React.Component {
       balance -= (monthly - interest);
     }
     return (interestSum);
+  }
+
+  generateAmortizedData(balance, totalInterest, interest, principle, payment, date) {
+
   }
 
   handleInput(input) {
